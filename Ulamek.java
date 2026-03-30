@@ -9,7 +9,7 @@ public class Ulamek
         if(mianownik == 0)
         {
             System.out.println("Nie można dzielić przez zero!");
-            mianownik = 1;
+            System.exit(1);
         }
         this.mianownik = mianownik;
     }
