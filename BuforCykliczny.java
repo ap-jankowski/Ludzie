@@ -1,3 +1,5 @@
+import Ludzie.Osoba
+
 public class BuforCykliczny
 {
     public static Osoba[] powieksz(Osoba[] tablica)

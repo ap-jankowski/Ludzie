@@ -1,3 +1,6 @@
+import Ludzie.Osoba
+import Ludzie.Agent
+
 public class Main
 {
     public static void main(String[] args)
