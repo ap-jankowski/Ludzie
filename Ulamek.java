@@ -28,8 +28,8 @@ public class Ulamek
 
     public void dodaj(Ulamek skladnik)
     {
-        licznik = licznik * skladnik.mianownik() + skladnik.licznik() * mianownik;
-        mianownik *= skladnik.mianownik();
+        licznik = licznik * skladnik.mianownik + skladnik.licznik * mianownik;
+        mianownik *= skladnik.mianownik;
         skroc();
     }
 
@@ -40,8 +40,8 @@ public class Ulamek
 
     public void pomnoz(Ulamek czynnik)
     {
-        licznik *= czynnik.licznik();
-        mianownik *= czynnik.mianownik();
+        licznik *= czynnik.licznik;
+        mianownik *= czynnik.mianownik;
         skroc();
     }
 
@@ -52,7 +52,7 @@ public class Ulamek
 
     public void odejmij(Ulamek odjemna)
     {
-        dodaj(new Ulamek(-odjemna.licznik(), odjemna.mianownik()));
+        dodaj(new Ulamek(-odjemna.licznik, odjemna.mianownik));
     }
 
     public void odejmij(int liczba)
@@ -62,9 +62,9 @@ public class Ulamek
 
     public void podziel(Ulamek dzielnik)
     {
-        if(dzielnik.licznik() == 0)
+        if(dzielnik.licznik == 0)
             System.out.println("Nie można dzielić przez zero!");
-        else pomnoz(new Ulamek(dzielnik.mianownik(), dzielnik.licznik()));
+        else pomnoz(new Ulamek(dzielnik.mianownik, dzielnik.licznik));
     }
 
     public void podziel(int liczba)
