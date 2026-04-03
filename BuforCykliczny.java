@@ -1,4 +1,4 @@
-import Ludzie.Osoba
+import Ludzie.Osoba;
 
 public class BuforCykliczny
 {

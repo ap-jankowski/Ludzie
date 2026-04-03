@@ -1,5 +1,5 @@
-import Ludzie.Osoba
-import Ludzie.Agent
+import Ludzie.Osoba;
+import Ludzie.Agent;
 
 public class Main
 {
