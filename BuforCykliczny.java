@@ -16,7 +16,7 @@ public class BuforCykliczny
     {
         Osoba[] w = new Osoba[tablica.length * 2];
         for(int i = 0; i < tablica.length; i++)
-            w[i] = tablica[i];
+            w[i] = tablica[(begin + i) % capacity];
         capacity *= 2;
         begin = 0;
         tablica = w;
@@ -26,7 +26,7 @@ public class BuforCykliczny
     {
         Osoba[] w = new Osoba[tablica.length / 2];
         for(int i = 0; i < tablica.length / 4; i++)
-            w[i] = tablica[i];
+            w[i] = tablica[(begin + i)%capacity];
 
         capacity /= 2;
         begin = 0;
