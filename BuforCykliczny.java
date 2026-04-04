@@ -22,10 +22,10 @@ public class BuforCykliczny
         tablica = w;
     }
 
-    public void pomniejsz()
+    private void pomniejsz()
     {
         Osoba[] w = new Osoba[capacity / 2];
-        for(int i = 0; i < size / 4; i++)
+        for(int i = 0; i < size; i++)
             w[i] = tablica[(begin + i)%capacity];
 
         capacity /= 2;
