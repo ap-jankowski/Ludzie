@@ -3,7 +3,7 @@ public class Ulamek
     private int licznik;
     private int mianownik;
 
-    Ulamek(int licznik, int mianownik)
+    public Ulamek(int licznik, int mianownik)
     {
         this.licznik = licznik;
         if(mianownik == 0)
@@ -16,14 +16,22 @@ public class Ulamek
 
     private int nwd(int a, int b)
     {
+        if(a < 0) a = -a;
+        if(b < 0) b = -b;
         if(b == 0) return a;
         return nwd(b, a % b);
     }
 
     private void skroc()
     {
-        licznik /= nwd(licznik, mianownik);
-        mianownik /= nwd(licznik, mianownik);
+        int nwd = nwd(licznik, mianownik);
+        licznik /= nwd;
+        mianownik /= nwd;
+        if(mianownik < 0)
+        {
+            licznik = -licznik;
+            mianownik = -mianownik;
+        }
     }
 
     public void dodaj(Ulamek skladnik)
@@ -78,6 +86,7 @@ public class Ulamek
     {
         skroc();
         if(mianownik == 1) return licznik + "";
+        else if(licznik == 0) return "0";
         else return licznik + "/" + mianownik;
     }
 }

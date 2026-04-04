@@ -18,5 +18,18 @@ public class Main
 
         for(Osoba os : tablica)
             System.out.println(os);
+
+
+        BuforCykliczny q = new BuforCykliczny();
+
+        q.dodaj(new Ulamek(1,2));
+        q.dodaj(new Ulamek(4, 6));
+        q.dodaj(new Ulamek(0, 3));
+        q.pobierz();
+        q.dodaj(new Ulamek(0, 3));
+        q.dodaj(new Ulamek(2, 3));
+        q.dodaj(new Ulamek(-1, 3));
+        q.wypisz();
+
     }
 }
