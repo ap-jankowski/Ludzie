@@ -14,8 +14,8 @@ public class BuforCykliczny
 
     private void powieksz()
     {
-        Osoba[] w = new Osoba[tablica.length * 2];
-        for(int i = 0; i < tablica.length; i++)
+        Osoba[] w = new Osoba[capacity * 2];
+        for(int i = 0; i < size; i++)
             w[i] = tablica[(begin + i) % capacity];
         capacity *= 2;
         begin = 0;
@@ -24,8 +24,8 @@ public class BuforCykliczny
 
     public void pomniejsz()
     {
-        Osoba[] w = new Osoba[tablica.length / 2];
-        for(int i = 0; i < tablica.length / 4; i++)
+        Osoba[] w = new Osoba[capacity / 2];
+        for(int i = 0; i < size / 4; i++)
             w[i] = tablica[(begin + i)%capacity];
 
         capacity /= 2;
